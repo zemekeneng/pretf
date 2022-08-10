@@ -79,7 +79,7 @@ class TerraformCommand:
             try:
                 log = json_loads(line)
             except json.decoder.JSONDecodeError:
-                log = {"non-json-log": str(line)
+                log = {"non-json-log": str(line)}
                        
             if log["type"] == "outputs":
                 outputs = log["outputs"]
